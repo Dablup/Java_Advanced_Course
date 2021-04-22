@@ -1,7 +1,4 @@
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -62,5 +59,41 @@ public class Main {
         }
 
 
+        /*
+            Set contains only unique entries
+            Hash set has no any order
+            Linked hash set has the same order of entries as they were added
+            In tree set entries are sorted
+         */
+        Set<Integer> hashSet1 = new HashSet<>();
+        Set<Integer> hashSet2 = new HashSet<>();
+        Set<String> linkedHashSet = new LinkedHashSet<>();
+        Set<String> treeSet = new TreeSet<>();
+
+
+
+        //union
+        hashSet1.add(0);
+        hashSet1.add(1);
+        hashSet1.add(2);
+        hashSet1.add(3);
+
+        hashSet2.add(2);
+        hashSet2.add(3);
+        hashSet2.add(4);
+
+        Set<Integer> union = new HashSet<>(hashSet1);
+        union.addAll(hashSet2);
+        System.out.println(union);
+
+        //intersection
+        Set<Integer> intersection = new HashSet<>(hashSet1);
+        intersection.retainAll(hashSet2);
+        System.out.println(intersection);
+
+        //difference
+        Set<Integer> difference = new HashSet<>(hashSet1);
+        difference.removeAll(hashSet2);
+        System.out.println(difference);
     }
 }
