@@ -21,7 +21,7 @@ public class Main {
          * In hash map, the data is not structured. It means that it does not maintain the order of adding elements to the map.
          * (When you output your map, your data can be outputted in a different order than the order of adding)
          * When we add Key,Value to the hash map, firstly hashcode of the Key is calculated then it is translated into index of some hidden array
-         * Then we put Structure [key,value,Node] to the calculated index of the array.
+         * Then we put Structure [hash, key,value,Node] to the calculated index of the array.
          * If hash codes of two objects are the same then we check if these objects are the same(with equals() function).
          * If yes then just replace 'value' to the new one.
          * If these objects are not the same then objects are stored in the linked list.
