@@ -1,17 +1,21 @@
 package Multithreading;
 
-public class SyncTest {
+public class SynchronizedKeyWord {
     private int counter = 0;
 
     public static void main(String[] args) throws InterruptedException {
-        SyncTest test = new SyncTest();
+        SynchronizedKeyWord test = new SynchronizedKeyWord();
         test.doWork();
     }
 
 
     // synchronized не дает нескольким потокам выполнять данный метод
-    public synchronized void increment(){
-        counter++;
+    public void increment(){
+        // мы синхронизируемся на объекте this
+        synchronized(this){
+            counter++;
+        }
+
     }
     public void doWork() throws InterruptedException {
         Thread thread1 = new Thread(new Runnable() {
@@ -39,3 +43,5 @@ public class SyncTest {
         System.out.println(counter);
     }
 }
+
+
