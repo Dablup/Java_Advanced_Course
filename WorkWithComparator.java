@@ -91,7 +91,6 @@ class Person{
     }
 }
 class StringLengthComparator implements Comparator<String> {
-
     @Override
     public int compare(String o1, String o2) {
         /*
@@ -105,11 +104,9 @@ class StringLengthComparator implements Comparator<String> {
             return -1;
         } else return 0;
     }
-
 }
 
 class BackwardIntegerComparator implements Comparator<Integer>{
-
     @Override
     public int compare(Integer o1, Integer o2) {
         if (o2 > o1){
