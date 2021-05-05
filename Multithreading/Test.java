@@ -17,6 +17,7 @@ public class Test {
 
 
 class MyThread extends Thread{
+
     // volatile means that variable will not be saved to the caches of cpu's
     private volatile boolean running = true;
 
