@@ -1,3 +1,5 @@
+package Collections;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -84,7 +86,7 @@ class Person{
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "Collections.Person{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';

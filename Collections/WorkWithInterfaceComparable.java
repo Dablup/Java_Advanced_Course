@@ -1,3 +1,5 @@
+package Collections;
+
 import java.util.*;
 
 public class WorkWithInterfaceComparable {
@@ -51,7 +53,7 @@ class New_person implements Comparable<New_person>{
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "Collections.Person{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';
