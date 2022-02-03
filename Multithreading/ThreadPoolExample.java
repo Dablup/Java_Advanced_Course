@@ -25,12 +25,13 @@ public class ThreadPoolExample {
         executorService.shutdown();
         System.out.println("All task were submitted");
         executorService.awaitTermination(1, TimeUnit.DAYS);
+        System.out.println(Work.value);
     }
 }
 
 class Work implements Runnable{
     private int id;
-
+    public static int value = 0;
     public Work(int id){
         this.id = id;
     }
@@ -38,6 +39,7 @@ class Work implements Runnable{
     @Override
     public void run() {
         try {
+            value++;
             Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
